@@ -1,0 +1,121 @@
+// Robot : Sensor driven 2 wheel robot
+
+int motor1a= 6;
+int motor1b= 7;
+
+int motor2a= 9;
+int motor2b= 10;
+
+int sensor1= 3;
+int sensor2= 4;
+
+
+void setup() {
+  Serial.begin(9600);
+  
+  pinMode(motor1a, OUTPUT);
+  pinMode(motor1b, OUTPUT);
+  
+  pinMode(motor2a, OUTPUT);
+  pinMode(motor2b, OUTPUT);
+  
+ // pinMode(sensor1, INPUT);
+ // pinMode(sensor2, INPUT);
+  
+}
+
+void loop() {
+ 
+  if (digitalRead(sensor1) == LOW && digitalRead(sensor2) == LOW) 
+  {
+  digitalWrite(motor1a, LOW);
+  digitalWrite(motor1b, HIGH);
+  
+  digitalWrite(motor2a, LOW);
+  digitalWrite(motor2b, LOW);
+  
+  delay (2000);
+ 
+   }
+  
+  
+  else if (digitalRead(sensor1) == LOW && digitalRead(sensor2) == HIGH) 
+  
+    {
+  digitalWrite(motor1a, LOW);
+  digitalWrite(motor1b, HIGH);
+  
+  digitalWrite(motor2a, LOW);
+  digitalWrite(motor2b, LOW);
+  
+  delay (2000);
+    }
+  
+  
+    else if (digitalRead(sensor1) == HIGH && digitalRead(sensor2) == LOW)   
+  
+    {
+  digitalWrite(motor1a, LOW);
+  digitalWrite(motor1b, LOW);
+  
+  digitalWrite(motor2a, LOW);
+  digitalWrite(motor2b, HIGH);
+  
+  delay (2000);
+    }
+    
+  digitalWrite(motor1a, HIGH);
+  digitalWrite(motor1b, LOW);
+  
+  digitalWrite(motor2a, HIGH);
+  digitalWrite(motor2b, LOW);
+  
+}
+  
+  /*
+  
+  void loop (){
+    if(digitalRead(sensor1) && digitalRead(sensor2)){
+    digitalWrite(motor1, HIGH);
+    digitalWrite(motor2, HIGH);
+    }
+     
+    
+    else if(digitalRead(sensor1)) {
+    digitalWrite(motor1, LOW);
+    digitalWrite(motor2, HIGH);
+    }
+   
+    else if (digitalRead(sensor2) ){
+    digitalWrite(motor1, HIGH);
+    digitalWrite(motor2, LOW);
+    }
+    
+    else {
+    digitalWrite(motor1,HIGH); 
+    digitalWrite(motor2,HIGH)                                                                                                                                                ;
+    }
+}
+
+*/
+  
+  
+    /*
+  else if (digitalRead(sensor1) == LOW){
+  digitalWrite(motor1a, HIGH);
+  digitalWrite(motor1b, LOW);
+  
+  digitalWrite(motor2a, LOW);
+  digitalWrite(motor2b, LOW);
+    }
+    
+  else if (digitalRead(sensor2) == LOW){
+  digitalWrite(motor1a, LOW);
+  digitalWrite(motor1b, LOW);
+  
+  digitalWrite(motor2a, HIGH);
+  digitalWrite(motor2b, LOW);
+    }
+    
+}
+  */   
