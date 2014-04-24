@@ -1,3 +1,5 @@
+//Collects temperature date and humidity data and transmits the data.
+
 #include <VirtualWire.h>
 
 #include "DHT.h"
