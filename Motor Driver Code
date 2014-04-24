@@ -1,4 +1,5 @@
 // Robot : Sensor driven 2 wheel robot
+//Sensor 1 and Sensor 2 are infrared sensors
 
 int motor1a= 6;
 int motor1b= 7;
